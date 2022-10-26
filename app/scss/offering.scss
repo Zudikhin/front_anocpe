@@ -1,0 +1,60 @@
+.offering {
+    background: linear-gradient(180deg, rgba(223, 194, 140, 0.47) -40.73%, rgba(0, 0, 0, 0) 66.27%), url(../img/offering/bg.jpeg), #1C1A16;
+    background-size: cover;
+    background-position: 50%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 120px 0px 184px 0px;
+    &_block {
+        & h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+        }
+        &_wrap {
+            &_list {
+                display: flex;
+                flex-direction: column;
+                &_item {
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100px;
+                    border: 1px solid #C9A263;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 30px;
+                    & p {
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 27px;
+                        text-transform: capitalize;
+                        color: #FFFFFF;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            & h2 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+            &_wrap {
+                height: 400px;
+                overflow-y: scroll;
+            }
+        }
+    }
+}
+
+.test {
+    background-color: red;
+}

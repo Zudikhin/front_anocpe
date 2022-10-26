@@ -1,0 +1,97 @@
+.header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 15px;
+    z-index: 2;
+    &_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_logo {
+            & img {
+                width: 165px;
+            }
+        }
+        &_burger {
+            width: 20px;
+            height: 16px;
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            cursor: pointer;
+            -webkit-transition: -webkit-transform 330ms ease-out;
+            transition: -webkit-transform 330ms ease-out;
+            transition: transform 330ms ease-out;
+            transition: transform 330ms ease-out, -webkit-transform 330ms ease-out;
+            & .line-menu {
+                background-color: #fff;
+                height: 2px;
+                width: 100%;
+                &.half {
+                    width: 50%;
+                }
+                &.start {
+                    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                    -webkit-transform-origin: right;
+                    transform-origin: right;
+                }
+                &.end {
+                    align-self: flex-end;
+                    -webkit-transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                    transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+                    -webkit-transform-origin: left;
+                    transform-origin: left;
+                }
+            }
+            &.active {
+                transform: rotate(-45deg);
+                & .line-menu {
+                    &.start {
+                        transform: rotate(-90deg) translateX(3px);
+                    }
+                    &.end {
+                        transform: rotate(-90deg) translateX(-3px);
+                    }
+                }
+            }
+        }
+        &_menu {
+            display: none;
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            &_burger {
+                display: none;
+            }
+            &_menu {
+                display: flex;
+                align-items: center;
+                & li {
+                    margin-left: 30px;
+                    & span {
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: rgba(255, 255, 255, 0.7);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
