@@ -483,6 +483,12 @@ input:focus {
   line-height: 29px;
   color: #FFFFFF;
 }
+.offering_block_wrap {
+  scrollbar-width: none;
+}
+.offering_block_wrap::-webkit-scrollbar {
+  display: none;
+}
 .offering_block_wrap_list {
   display: -webkit-box;
   display: -ms-flexbox;

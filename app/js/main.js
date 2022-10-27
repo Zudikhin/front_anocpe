@@ -5,6 +5,50 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     });
 
+    // if($(window).width() > 1199) {
+    //     $(".offering_block_wrap_scroll").scroll(function() {
+    //         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+    //             $("#fullpage").fullpage.moveTo($(this).index() + 2);
+    //         } else if($(this).scrollTop() == 0) {
+    //             $("#fullpage").fullpage.moveTo($(this).index() + 0);
+    //         }
+    //     });
+    //     $(".project_block_wrap").scroll(function() {
+    //         if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+    //             $("#fullpage").fullpage.moveTo($(this).index() + 4);
+    //         } else if($(this).scrollTop() == 0) {
+    //             $("#fullpage").fullpage.moveTo($(this).index() + 2);
+    //         }
+    //     });
+    // }
+
+    if($(window).width() > 1199) {
+        $(".offering_block_wrap_scroll").mCustomScrollbar({
+            callbacks:{
+                onScroll:function() {
+                    var scroll = this.mcs.topPct;
+                    if(scroll == 0) {
+                        $("#fullpage").fullpage.moveTo($(this).index() + 0);
+                    } else if(scroll == 100) {
+                        $("#fullpage").fullpage.moveTo($(this).index() + 2);
+                    }
+                }
+            }
+        });
+        $(".project_block_wrap").mCustomScrollbar({
+            callbacks:{
+                onScroll:function() {
+                    var scroll = this.mcs.topPct;
+                    if(scroll == 0) {
+                        $("#fullpage").fullpage.moveTo($(this).index() + 2);
+                    } else if(scroll == 100) {
+                        $("#fullpage").fullpage.moveTo($(this).index() + 4);
+                    }
+                }
+            }
+        });
+    }
+
     $(".geography_block_map_dot").click(function() {
         if($(window).width() < 1200) {
             $(".geography_block_map_dot").removeClass("active");
@@ -51,33 +95,12 @@ $(document).ready(function () {
         $.fn.fullpage.setAllowScrolling(false);
     });
 
-    
-    
     if($(window).width() > 1200) {
         $('#fullpage').fullpage({
             normalScrollElements: '.offering_block_wrap'
         });
     } else {
         $('#fullpage').fullpage();
-    }
-    
-    
-    if($(window).width() > 1199) {
-        $(".offering_block_wrap_scroll").scroll(function() {
-            if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-                $("#fullpage").fullpage.moveTo($(this).index() + 2);
-            } else if($(this).scrollTop() == 0) {
-                $("#fullpage").fullpage.moveTo($(this).index() + 0);
-            }
-        });
-
-        $(".project_block_wrap").scroll(function() {
-            if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-                $("#fullpage").fullpage.moveTo($(this).index() + 4);
-            } else if($(this).scrollTop() == 0) {
-                $("#fullpage").fullpage.moveTo($(this).index() + 2);
-            }
-        });
     }
 
 });
