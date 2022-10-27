@@ -32,6 +32,10 @@ body {
   position: relative;
 }
 
+body.hide {
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }

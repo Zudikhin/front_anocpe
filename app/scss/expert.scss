@@ -1,0 +1,102 @@
+.expert {
+    background: url(../img/project/bg.png);
+    background-size: cover;
+    background-position: 50%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 121px 0px 134px 0px;
+    &_block {
+        display: flex;
+        flex-direction: column;
+        &_text {
+            order: 1;
+            & h3 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                color: #FFDDA0;
+            }
+            & p {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                text-align: justify;
+                color: rgba(255, 255, 255, 0.6);
+                margin-top: 20px;
+            }
+        }
+        &_img {
+            order: 2;
+            width: calc(100% + 30px);
+            transform: translateX(-15px);
+            margin-top: 20px;
+            &.desk {
+                display: none;
+            }
+            &.mob {
+                display: block;
+            }
+        }
+    }
+    &_back {
+        &_img {
+            display: none;
+        }
+    }
+    @media (min-width: 576px) {
+        &_block {
+            &_img {
+                &.desk {
+                    display: block;
+                }
+                &.mob {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_back_img {
+            display: block;
+            position: absolute;
+            left: 0px;
+            bottom: 80px;
+            width: 650px;
+        }
+        &_block {
+            box-sizing: border-box;
+            padding-right: 97px;
+            &_img {
+                display: none;
+                &.desk {
+                    display: none;
+                }
+            }
+            &_text {
+                margin-left: auto;
+                width: 654px;
+                & h3 {
+                    font-size: 36px;
+                    line-height: 44px;
+                }
+                & p {
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        &_back_img {
+            width: 750px;
+        }
+    }
+    @media (min-width: 1680px) {
+        &_back_img {
+            width: 900px;
+        }
+    }
+}

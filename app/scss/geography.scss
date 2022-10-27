@@ -1,0 +1,116 @@
+.geography {
+    background: url(../img/geography/bg.png);
+    background-size: cover;
+    background-position: 50%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 120px 0px 184px 0px;
+    &_block {
+        & h2 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+            & span {
+                font-weight: 400;
+            }
+        }
+        &_info {
+            &_item {
+                display: none;
+                flex-direction: column;
+                & h4 {
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    text-transform: capitalize;
+                    color: #FFFFFF;
+                    margin-top: 15px;
+                }
+                & p {
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 21px;
+                    text-transform: capitalize;
+                    color: #9C9C9C;
+                    margin-top: 10px;
+                }
+                & h5 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #FFDDA0;
+                    margin-top: 15px;
+                }
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+        &_map {
+            margin-top: 30px;
+            &_dot {
+                fill: #9B7A3E;
+                cursor: pointer;
+                &.active {
+                    fill: #FFDDA0;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        padding: 104px 0px 80px 0px;
+        &_block {
+            & h2 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+            &_info {
+                &_item {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-top: 15px;
+                    &_left {
+                        width: 334px;
+                    }
+                    &.active {
+                        display: flex;
+                    }
+                    & h4 {
+                        margin-top: 0px;
+                    }
+                    & h5 {
+                        font-size: 36px;
+                        line-height: 44px;
+                        margin-top: 0px;
+                    }
+                }
+            }
+            &_map {
+                width: 750px;
+                margin: 0 auto;
+                margin-top: 0px;
+            }
+        }
+    }
+    @media (min-width: 1680px) {
+        padding: 120px 0px 80px 0px;
+        &_block {
+            &_map {
+                width: 1080px;
+            }
+        }
+    }
+}
+
+
+

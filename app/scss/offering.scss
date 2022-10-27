@@ -1,5 +1,5 @@
 .offering {
-    background: linear-gradient(180deg, rgba(223, 194, 140, 0.47) -40.73%, rgba(0, 0, 0, 0) 66.27%), url(../img/offering/bg.jpeg), #1C1A16;
+    background: url(../img/offering/bg.png);
     background-size: cover;
     background-position: 50%;
     box-sizing: border-box;
@@ -42,19 +42,46 @@
         }
     }
     @media (min-width: 1200px) {
+        padding: 104px 0px 104px 0px;
         &_block {
             & h2 {
                 font-size: 36px;
                 line-height: 44px;
             }
             &_wrap {
-                height: 400px;
+                height: 450px;
+                width: 750px;
                 overflow-y: scroll;
+                margin: 0 auto;
+                margin-top: 50px;
+                &_list {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    position: relative;
+                    &_item {
+                        width: calc(50% - 15px);
+                        &:first-child {
+                            margin-top: 0px;
+                        }
+                        &:nth-child(2) {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+                &_space {
+                    height: 120px;
+                    background-color: transparent;
+                }
             }
         }
     }
-}
-
-.test {
-    background-color: red;
+    @media (min-width: 1680px) {
+        &_block {
+            &_wrap {
+                height: 650px;
+            }
+        }
+    }
 }
