@@ -60,8 +60,10 @@
             &_dot {
                 fill: #9B7A3E;
                 cursor: pointer;
+                transition: all 0.3s linear;
                 &.active {
                     fill: #FFDDA0;
+                    transition: all 0.3s linear;
                 }
             }
         }
@@ -70,8 +72,8 @@
         padding: 104px 0px 80px 0px;
         &_block {
             & h2 {
-                font-size: 36px;
-                line-height: 44px;
+                font-size: 32px;
+                line-height: 38px;
             }
             &_info {
                 &_item {
@@ -87,23 +89,56 @@
                     }
                     & h4 {
                         margin-top: 0px;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                    & p {
+                        font-size: 12px;
+                        line-height: 18px;
                     }
                     & h5 {
-                        font-size: 36px;
-                        line-height: 44px;
+                        font-size: 32px;
+                        line-height: 38px;
                         margin-top: 0px;
                     }
                 }
             }
             &_map {
-                width: 750px;
+                width: 600px;
                 margin: 0 auto;
                 margin-top: 0px;
             }
         }
     }
-    @media (min-width: 1680px) {
-        padding: 120px 0px 80px 0px;
+    @media (min-width: 1440px) {
+        &_block {
+            & h2 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+            &_info {
+                &_item {
+                    margin-top: 20px;
+                }
+                & h4 {
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+                & p {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+                & h5 {
+                    font-size: 36px;
+                    line-height: 44px;
+                }
+            }
+            &_map {
+                width: 700px;
+            }
+        }
+    }
+    @media (min-width: 1920px) {
         &_block {
             &_map {
                 width: 1080px;

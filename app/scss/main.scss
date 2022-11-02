@@ -107,9 +107,59 @@
     }
     @media (min-width: 1200px) {
         padding-top: 0px;
-        min-height: calc(100vh - 81px);
+        min-height: calc(100vh - 61px);
         &_block {
             width: 670px;
+            &_tagline {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & h1 {
+                font-size: 46px;
+                line-height: 58px;
+            }
+            &_text {
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 20px;
+            }
+            &_btns {
+                margin-top: 30px;
+                &_call {
+                    width: 200px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 14px;
+                }
+                &_detail {
+                    margin-left: 30px;
+                    width: 194px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &_bottom {
+            padding: 20px 0px 15px 0px;
+            &_list {
+                &_item {
+                    margin-right: 160px;
+                    & span {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    & p {
+                        font-size: 14px;
+                        line-height: 18px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        &_block {
             &_tagline {
                 font-size: 18px;
                 line-height: 21px;
@@ -121,30 +171,25 @@
             &_text {
                 font-size: 18px;
                 line-height: 29px;
-                margin-top: 20px;
             }
             &_btns {
-                margin-top: 50px;
                 &_call {
                     width: 250px;
-                    height: 50px;
-                    line-height: 50px;
+                    height: 51px;
+                    line-height: 51px;
                     font-size: 18px;
                 }
                 &_detail {
-                    margin-left: 30px;
                     width: 194px;
-                    height: 50px;
-                    line-height: 50px;
+                    height: 51px;
                     font-size: 18px;
+                    line-height: 51px;
                 }
             }
         }
         &_bottom {
-            padding: 35px 0px 20px 0px;
             &_list {
                 &_item {
-                    margin-right: 160px;
                     & span {
                         font-size: 24px;
                         line-height: 29px;
@@ -152,7 +197,6 @@
                     & p {
                         font-size: 16px;
                         line-height: 19px;
-                        margin-top: 5px;
                     }
                 }
             }
